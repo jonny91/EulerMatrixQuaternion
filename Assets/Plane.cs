@@ -23,9 +23,11 @@ public class Plane : MonoBehaviour
     private Transform EffectR;
 
     private Vector3 _offset = new Vector3(0, 0, -.5f);
+    private Quaternion _originRot;
 
     private void Start()
     {
+        _originRot = EffectPrefab.localRotation;
         EffectL = Instantiate(EffectPrefab, OtherSpace);
         EffectR = Instantiate(EffectPrefab, OtherSpace);
     }
@@ -35,13 +37,16 @@ public class Plane : MonoBehaviour
         EffectL.transform.position = L.position + _offset;
         EffectR.transform.position = R.position + _offset;
 
-        // var posWorldL = L.TransformPoint(_offset);
-        // EffectL.transform.localPosition = OtherSpace.InverseTransformPoint(posWorldL);
-        
         // var posWorldL = L.localToWorldMatrix.MultiplyPoint3x4(_offset);
         // EffectL.transform.localPosition = OtherSpace.worldToLocalMatrix.MultiplyPoint3x4(posWorldL);
         //
         // var posWorldR = R.localToWorldMatrix.MultiplyPoint3x4(_offset);
         // EffectR.transform.localPosition = OtherSpace.worldToLocalMatrix.MultiplyPoint3x4(posWorldR);
+      
+        // var posWorldL = L.TransformPoint(_offset);
+        // EffectL.transform.localPosition = OtherSpace.InverseTransformPoint(posWorldL);
+        // EffectL.transform.localRotation = _originRot * Quaternion.Inverse(OtherSpace.rotation);
     }
+    
+    
 }
