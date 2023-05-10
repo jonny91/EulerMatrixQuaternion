@@ -17,22 +17,28 @@ public class Plane : MonoBehaviour
     public Transform L;
     public Transform R;
     public Transform EffectPrefab;
+    public Transform OtherSpace;
 
     private Transform EffectL;
     private Transform EffectR;
 
+    private Vector3 _offset = new Vector3(0, 0, -.5f);
+
     private void Start()
     {
-        EffectL = Instantiate(EffectPrefab);
-        EffectR = Instantiate(EffectPrefab);
+        EffectL = Instantiate(EffectPrefab, OtherSpace);
+        EffectR = Instantiate(EffectPrefab, OtherSpace);
     }
 
     private void FixedUpdate()
     {
-        var posL = L.localToWorldMatrix.MultiplyPoint3x4(new Vector3(0, 0, -.5f));
-        EffectL.transform.position = posL;
+        EffectL.transform.position = L.position + _offset;
+        EffectR.transform.position = R.position + _offset;
 
-        var posR = R.localToWorldMatrix.MultiplyPoint3x4(new Vector3(0, 0, -.5f));
-        EffectR.transform.position = posR;
+        // var posWorldL = L.localToWorldMatrix.MultiplyPoint3x4(_offset);
+        // EffectL.transform.localPosition = OtherSpace.worldToLocalMatrix.MultiplyPoint3x4(posWorldL);
+        //
+        // var posWorldR = R.localToWorldMatrix.MultiplyPoint3x4(_offset);
+        // EffectR.transform.localPosition = OtherSpace.worldToLocalMatrix.MultiplyPoint3x4(posWorldR);
     }
 }
