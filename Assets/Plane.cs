@@ -35,6 +35,9 @@ public class Plane : MonoBehaviour
         EffectL.transform.position = L.position + _offset;
         EffectR.transform.position = R.position + _offset;
 
+        // var posWorldL = L.TransformPoint(_offset);
+        // EffectL.transform.localPosition = OtherSpace.InverseTransformPoint(posWorldL);
+        
         // var posWorldL = L.localToWorldMatrix.MultiplyPoint3x4(_offset);
         // EffectL.transform.localPosition = OtherSpace.worldToLocalMatrix.MultiplyPoint3x4(posWorldL);
         //
