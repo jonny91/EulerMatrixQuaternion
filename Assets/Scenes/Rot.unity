@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 116.69998, y: -40.899994}
+  m_AnchoredPosition: {x: 116.70001, y: -40.899994}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &24369826
@@ -311,7 +311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 116.69998, y: -76.29999}
+  m_AnchoredPosition: {x: 116.70001, y: -76.29999}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159064747
@@ -655,9 +655,9 @@ RectTransform:
   m_Father: {fileID: 658022580}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 117, y: -281}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 116.20001, y: 28.799988}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &357551572
@@ -1427,7 +1427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 117.100006, y: -114}
+  m_AnchoredPosition: {x: 117.10004, y: -114}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &793974308
@@ -2234,6 +2234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8110311018022482806, guid: 7a7da764834c0e049955fe23955877a7,
         type: 3}
+      propertyPath: Enable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110311018022482806, guid: 7a7da764834c0e049955fe23955877a7,
+        type: 3}
       propertyPath: XLabel
       value: 
       objectReference: {fileID: 561567461}
@@ -2247,6 +2252,11 @@ PrefabInstance:
       propertyPath: ZLabel
       value: 
       objectReference: {fileID: 838895436}
+    - target: {fileID: 8110311018022482807, guid: 7a7da764834c0e049955fe23955877a7,
+        type: 3}
+      propertyPath: Enable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8110311018022482807, guid: 7a7da764834c0e049955fe23955877a7,
         type: 3}
       propertyPath: XLabel

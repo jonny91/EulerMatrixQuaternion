@@ -22,7 +22,7 @@ public class Plane : MonoBehaviour
     private Transform EffectL;
     private Transform EffectR;
 
-    private Vector3 _offset = new Vector3(0, 0, 0.1f);
+    private Vector3 _offset = new(0, 0, 0f);
     private Quaternion _originRot;
 
     private void Start()
@@ -34,10 +34,10 @@ public class Plane : MonoBehaviour
 
     private void Update()
     {
-        EffectL.transform.position = L.position + _offset;
-        EffectR.transform.position = R.position + _offset;
-        EffectL.transform.rotation = L.rotation;
-        EffectR.transform.rotation = R.rotation;
+        // EffectL.transform.position = L.position + _offset;
+        // EffectR.transform.position = R.position + _offset;
+        // EffectL.transform.rotation = L.rotation;
+        // EffectR.transform.rotation = R.rotation;
 
         // var posWorldL = L.localToWorldMatrix.MultiplyPoint3x4(_offset);
         // EffectL.transform.localPosition = OtherSpace.worldToLocalMatrix.MultiplyPoint3x4(posWorldL);
@@ -47,11 +47,8 @@ public class Plane : MonoBehaviour
         // EffectR.transform.localPosition = OtherSpace.worldToLocalMatrix.MultiplyPoint3x4(posWorldR);
         // EffectR.transform.localRotation = Quaternion.Euler(_originRot.eulerAngles + R.rotation.eulerAngles - OtherSpace.eulerAngles);
         
-      
         // var posWorldL = L.TransformPoint(_offset);
         // EffectL.transform.localPosition = OtherSpace.InverseTransformPoint(posWorldL);
         // EffectL.transform.localRotation = _originRot * Quaternion.Inverse(OtherSpace.rotation) * L.rotation;
     }
-    
-    
 }
